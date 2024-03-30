@@ -1,1 +1,65 @@
+Git --> Version control system but Github/Gitlab/Bitbucket all are online repositories to manage source code
+To check if we have git installed on server --> git version (most of the linux servers have git installed by default)
+How to create a repository in Github if u are completely resposible for repo creation and handle --> 
+   Step 1: create a folder for project
+   Step 2: Create files
+   Step 3: use git add <filename> to track the file by which the file will go to staging area but not yet in local repo
+   Step 4: use git commit -m "message"  --> file is now in local repo
+   step 5: use git push origin master to push the changes to remote repo
+In local repo there are 3-things--> 
+    1. working directory-->how do we know if the folder is tracked by Git? its by checking hidden folder .git is present...(to see hidden files we use ls -la command in git)
+       if you want a particular folder to be tracked by git we use --> git init (to initalize git) {if you want to rename the just create branch u use git branch -m <name>}
+    2. Staging area-->
+    3. Local Repo--> (u can only upload the code to remote repo from local repo)
+git ls-files -->tracks whether file is in staging area or local repo or any of the git locations
+git log --> tells all the commit ID's && head points to the latest commit
+git log --oneline  --> lists all commits in oneline
+git show --> history of commit or what was done with commit
+git remote -v --> going to tell what is configured on my remote repo
+How do I configure and add remote repo??
+  by using: git remote add origin <https link of remote repo>
+git push origin master { to push we need git credentials, user name is git username but git password is not going to work. we need to create token}
+How to create a token
+ 1. go to settings on the profile extreme right
+ 2. Developer settings
+ 3. create token (classic)
+
+BRANCHING IN GIT
+1. We need branching becoz developer cannot commit directly to master branch as we have a multiple deveopers either working on same feature or different features. 
+   So I need to review the code and then trigger merging into the master branch.
+2. Head points to latest commit
+3. HOW DO U SEE NUMBER OF BRANCHES?--> git branch
+4. WHAT DOES IT MEAN BRANCHING OUT OF MASTER AND HOW U DO IT? It means new branch will have everything in master plus additional changes specific to branch.
+   HOW >> git branch <branch name> master  (ex- git branch branch2 master) 
+5. Current active branch is shown with *
+6. HOW TO SWITCH TO DIFFERENT BRANCH?  --> to switch to different branch u use git checkout <branch-name>  (ex- git checkout branch2)
+
+STASHING
+ --
+Stashing is saving a incomplete work to temparary shell.
+git stash 
+
+Then to bring back these changes from temparary shell, we need to UNSTASH changes.
+
+UNSTASHING
+Unstashng is done by using 2-ways >>> 
+1. pop  --> whatever is in temparary shell is deleted  (mostly used)
+2. apply --> changes are still maintained in temporary shell as we as working directory (use if when u need to add same changes to diff branch)
+
+IGNORE FILES THAT YOU DONT WANT GIT TO TRACK
+- create a .gitignore file
+- Mention about files that u dont want git to track
+- Example- if you have 2 files readme.txt and log files which u dont want git to track then you create a file named .gitignore and mention these files names viz readme and *.log on new it 
+
+REVERT A COMMIT
+- git revert <commitID>
+
+DELETE A LOCAL AND REMOTE BRANCH
+- To delete branches, first you need to delete a remote branch by checking out the branch u want to delete
+  git checkout <remote-branch-name>
+  git push origin -d <remote-branch-name>
+- Then to delete local branch u need to switch to different branch then run command
+  git branch -D <local-branch-name>
+
+
 
