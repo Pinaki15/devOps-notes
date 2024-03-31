@@ -59,6 +59,12 @@ DELETE A LOCAL AND REMOTE BRANCH
   git checkout <remote-branch-name>
   git push origin -d <remote-branch-name>
 - Then to delete local branch u need to switch to different branch then run command
+
+GIT FLOW WORKFLOW 
+- https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+- https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
+- 
+
   git branch -D <local-branch-name>
 
 
