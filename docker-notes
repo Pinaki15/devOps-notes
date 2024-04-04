@@ -1,0 +1,15 @@
+Webserver is used to host the webpages. Without web server, u wont be able to see web-page
+  TO PULL IMAGE FROM DOCKER HUB
+  docker pull <image-name>
+
+  TO SEE RUNNING CONTAINERS
+  docker ps
+
+  TO RUN A CONTAINER
+  docker run <image-name>
+
+  TO INSPECT IMAGE
+  docker inspect <image-name>
+
+  PORT MAPPING TO ACCESS A CONTAINER TO CREATE A BRIDGE BETWEEN HOST AND CONTAINER
+  docker run -itd -p 82:80 httpd  {-p is for port mapping}
