@@ -1,1 +1,11 @@
-
+Shell Scripting is highly used for
+ - Automating repititive tasks
+ - back up and maintenance of databases
+ - Running Cron jobs- Cron jobs are used to automating tasks that run on the background periodically, e.g. in web applications like LiveAgent.
+TYpes of shells
+- Bourne Shell (sh)
+- Korn shell (ksh)
+- Bourne Again Shell (bash)
+- POSIX shell (sh)
+- C shell (csh)
+- TENEX/TOPS C Shell (tcsh)
