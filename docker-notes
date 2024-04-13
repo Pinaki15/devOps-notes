@@ -1,15 +1,37 @@
 Webserver is used to host the webpages. Without web server, u wont be able to see web-page
-  TO PULL IMAGE FROM DOCKER HUB
-  docker pull <image-name>
 
-  TO SEE RUNNING CONTAINERS
-  docker ps
+Microservices are deployed as images into containers like Docker. All we need to do is run the image to create containers
 
-  TO RUN A CONTAINER
-  docker run <image-name>
+HOW TO CREATE CONTAINERS??
+- take a VM - EC2 instance
+- install container engine. EX-docker
 
-  TO INSPECT IMAGE
-  docker inspect <image-name>
+DOCKER ARCHITECTURE
+- we have a client and server.
+- we type commands on the client
+- Information goes to the server(docker daemon) using REST API and docker daemon does all the work and sends response back to the client
+- Docker is developed in go language
+- We need to have image of the container, run the image to create conatiners
+- 
 
-  PORT MAPPING TO ACCESS A CONTAINER TO CREATE A BRIDGE BETWEEN HOST AND CONTAINER
-  docker run -itd -p 82:80 httpd  {-p is for port mapping}
+DIFFERENCE BETWEEN VIRTUAL MACHINE AND CONTAINER?
+- Since container engine virtualizes host OS, we can leverage host OS with all containers.
+- In virtualization we install hypervisor, or any virtualization software to create virtual machines which have their own OS
+- In virtualization, virtualiation is done on physical server so we need separate OS on each of vm's but in container virtualization 
+  is happenning at the host OS where we can leverage host OS for containers.
+- IN containers, host OS has to be LINUX, on windows we cannot do containers
+  
+TO PULL IMAGE FROM DOCKER HUB
+docker pull <image-name>
+
+TO SEE RUNNING CONTAINERS
+docker ps
+
+TO RUN A CONTAINER
+docker run <image-name>
+
+TO INSPECT IMAGE
+docker inspect <image-name>
+
+PORT MAPPING TO ACCESS A CONTAINER TO CREATE A BRIDGE BETWEEN HOST AND CONTAINER
+docker run -itd -p 82:80 httpd  {-p is for port mapping}
