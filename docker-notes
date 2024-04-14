@@ -34,4 +34,30 @@ TO INSPECT IMAGE
 docker inspect <image-name>
 
 PORT MAPPING TO ACCESS A CONTAINER TO CREATE A BRIDGE BETWEEN HOST AND CONTAINER
-docker run -itd -p 82:80 httpd  {-p is for port mapping}
+docker run -itd -p 82:80 httpd  {-p is for port mapping, to specify ports
+                                 -it stands for interactive which we need to use to go inside container and execute commands
+                                 -d stands for detached which we use becoz we need container to be running even if I am not inside container
+                                }
+
+TO GO INSIDE CONTAINER
+docker exec -it <container-id> /bin/bash
+
+TO SAVE CONTAINER AS AN IMAGE
+docker commit <container-id> <name-u-wanttogive-to-image>  {ex-docker commit ccd9990 newImage}
+
+TO CHECK IF APACHE2 SERVICE IS RUNNING
+service apache2 status
+
+TO START APACHE2 SERVICE
+service apache2 start
+
+TO RENAME A DOCKER IMAGE
+docker tag <current-image-name> <docker-userid>/<new-image-name>
+
+TO PUSH TO DOCKER HUB
+docker login
+docker push <image-name>
+
+
+
+
