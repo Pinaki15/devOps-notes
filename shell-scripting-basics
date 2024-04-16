@@ -9,3 +9,7 @@ TYpes of shells
 - POSIX shell (sh)
 - C shell (csh)
 - TENEX/TOPS C Shell (tcsh)
+
+ASSIGNING VARIABLES:
+read -  read command allows you to prompt for input and store it in a variable.
+example- 
