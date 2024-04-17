@@ -10,6 +10,17 @@ TYpes of shells
 - C shell (csh)
 - TENEX/TOPS C Shell (tcsh)
 
+EXECUTING SHELL SCRIPT
+To execute a script file we need to assign an executable permission by using one of the following commands
+chmod +x script-name.bash
+chmod 755 script-name.bash
+
+TO RUN A SHELL SCRIPT
+To run a shell script u can follow any one of the following ways
+./script-name.bash 
+bash script-name.bash
+
+
 ASSIGNING VARIABLES:
 read -  read command allows you to prompt for input and store it in a variable.
 example- 
